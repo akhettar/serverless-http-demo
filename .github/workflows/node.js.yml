@@ -38,9 +38,8 @@ jobs:
     - name: deploy lambda to aws
       uses: serverless/github-action@master
       with:
-        args: deploy
+        args: deploy --region eu-west-1
       env:
-       AWS_REGION: eu-west-1
        AWS_ACCESS_KEY_ID: ${{ secrets.TEST_AWS_ACCESS_KEY_ID }}
        AWS_SECRET_ACCESS_KEY: ${{ secrets.TEST_AWS_SECRET_ACCESS_KEY }}
       
